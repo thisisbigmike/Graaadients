@@ -627,7 +627,7 @@ export function GradientGenerator() {
                     <Label htmlFor="gradient-type" className="text-slate-200 font-semibold text-sm">
                       Radial Pattern
                     </Label>
-                    <p className="text-[11px] text-slate-500 font-light">Toggle between radial and linear directions</p>
+                    <p className="text-[11px] text-slate-400 font-light">Toggle between radial and linear directions</p>
                   </div>
                   <Switch
                     id="gradient-type"
@@ -642,7 +642,7 @@ export function GradientGenerator() {
                       <Label htmlFor="angle-slider" className="text-slate-200 text-xs font-bold">
                         Angle ({angle}°)
                       </Label>
-                      <span className="text-[10px] text-slate-500 font-mono">-360° to 360°</span>
+                      <span className="text-[10px] text-slate-400 font-mono">-360° to 360°</span>
                     </div>
                     <Slider
                       id="angle-slider"
@@ -700,7 +700,7 @@ export function GradientGenerator() {
 
                       {/* Position slider */}
                       <div className="flex-1 space-y-1">
-                        <div className="flex justify-between text-[9px] text-slate-500">
+                        <div className="flex justify-between text-[9px] text-slate-400">
                           <span>Stop {index + 1}</span>
                           <span>{stop.position}%</span>
                         </div>
@@ -717,7 +717,7 @@ export function GradientGenerator() {
                       {colors.length > 2 && (
                         <button
                           onClick={() => handleRemoveStop(index)}
-                          className="text-slate-500 hover:text-rose-400 transition-colors p-1.5 rounded-lg hover:bg-rose-500/10 shrink-0 cursor-pointer"
+                          className="text-slate-400 hover:text-rose-400 transition-colors p-1.5 rounded-lg hover:bg-rose-500/10 shrink-0 cursor-pointer"
                           title="Delete Stop"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
@@ -739,7 +739,7 @@ export function GradientGenerator() {
                     <Label htmlFor="noise-slider" className="text-slate-200 text-xs font-bold">
                       Grain Opacity ({noiseOpacity}%)
                     </Label>
-                    <span className="text-[10px] text-slate-500 font-mono">0% to 100%</span>
+                    <span className="text-[10px] text-slate-400 font-mono">0% to 100%</span>
                   </div>
                   <Slider
                     id="noise-slider"
@@ -748,7 +748,7 @@ export function GradientGenerator() {
                     value={[noiseOpacity]}
                     onValueChange={(val) => setNoiseOpacity(val[0])}
                   />
-                  <p className="text-[10px] text-slate-500 leading-relaxed font-light mt-1">
+                  <p className="text-[10px] text-slate-400 leading-relaxed font-light mt-1">
                     Adds premium noise micro-textures. Keep it around 5-15% for subtle styling, or turn up for raw grunge aesthetics.
                   </p>
                 </div>
@@ -822,63 +822,63 @@ export function GradientGenerator() {
                           <span className="w-2 h-2 rounded-full bg-indigo-400" />
                         )}
                       </div>
-                      <span className="text-[10px] text-slate-500 uppercase font-semibold tracking-wider">
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">
                         {preset.type} • {preset.colors.length} stops
                       </span>
                     </div>
                   </div>
                 );
-              })}
-            </div>
-          )}
-
-        </div>
-
-      </div>
-
-      {/* Choose Export Size Modal */}
-      {isExportModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm transition-opacity duration-300">
-          <div className="relative w-full max-w-md bg-neutral-950 border border-white/15 rounded-3xl p-6 shadow-2xl space-y-6 animate-in zoom-in-95 duration-200">
-            
-            {/* Modal Header */}
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div className="space-y-1">
-                <h3 className="text-lg font-extrabold text-white flex items-center gap-2">
-                  <Download className="w-5 h-5 text-indigo-400" /> Export Options
-                </h3>
-                <p className="text-xs text-slate-500 font-light">Select or input custom render parameters</p>
-              </div>
-              <button 
-                onClick={() => setIsExportModalOpen(false)} 
-                className="text-slate-400 hover:text-white transition-colors p-1.5 hover:bg-white/5 rounded-xl cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Sizes Presets Grid */}
-            <div className="grid grid-cols-2 gap-3">
-              {RESOLUTION_PRESETS.map((preset) => {
-                const isSelected = exportPreset.name === preset.name;
-                return (
-                  <button
-                    key={preset.name}
-                    onClick={() => setExportPreset(preset)}
-                    className={`p-3 rounded-xl border text-left flex flex-col gap-1 transition-all select-none cursor-pointer hover:border-indigo-500/30 ${
-                      isSelected
-                        ? "bg-indigo-950/20 border-indigo-500/50 text-indigo-300"
-                        : "bg-neutral-900/40 border-white/5 text-slate-300 hover:bg-neutral-900/60"
-                    }`}
-                  >
-                    <span className="text-xs font-bold text-white">{preset.name}</span>
-                    <span className="text-[10px] text-slate-500 font-mono">
-                      {preset.name === "Custom" ? "Input custom px" : `${preset.width} × ${preset.height} px`}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+               })}
+             </div>
+           )}
+ 
+         </div>
+ 
+       </div>
+ 
+       {/* Choose Export Size Modal */}
+       {isExportModalOpen && (
+         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm transition-opacity duration-300">
+           <div className="relative w-full max-w-md bg-neutral-950 border border-white/15 rounded-3xl p-6 shadow-2xl space-y-6 animate-in zoom-in-95 duration-200">
+             
+             {/* Modal Header */}
+             <div className="flex items-center justify-between border-b border-white/10 pb-4">
+               <div className="space-y-1">
+                 <h3 className="text-lg font-extrabold text-white flex items-center gap-2">
+                   <Download className="w-5 h-5 text-indigo-400" /> Export Options
+                 </h3>
+                 <p className="text-xs text-slate-400 font-light">Select or input custom render parameters</p>
+               </div>
+               <button 
+                 onClick={() => setIsExportModalOpen(false)} 
+                 className="text-slate-400 hover:text-white transition-colors p-1.5 hover:bg-white/5 rounded-xl cursor-pointer"
+               >
+                 <X className="w-5 h-5" />
+               </button>
+             </div>
+ 
+             {/* Sizes Presets Grid */}
+             <div className="grid grid-cols-2 gap-3">
+               {RESOLUTION_PRESETS.map((preset) => {
+                 const isSelected = exportPreset.name === preset.name;
+                 return (
+                   <button
+                     key={preset.name}
+                     onClick={() => setExportPreset(preset)}
+                     className={`p-3 rounded-xl border text-left flex flex-col gap-1 transition-all select-none cursor-pointer hover:border-indigo-500/30 ${
+                       isSelected
+                         ? "bg-indigo-950/20 border-indigo-500/50 text-indigo-300"
+                         : "bg-neutral-900/40 border-white/5 text-slate-300 hover:bg-neutral-900/60"
+                     }`}
+                   >
+                     <span className="text-xs font-bold text-white">{preset.name}</span>
+                     <span className="text-[10px] text-slate-400 font-mono">
+                       {preset.name === "Custom" ? "Input custom px" : `${preset.width} × ${preset.height} px`}
+                     </span>
+                   </button>
+                 );
+               })}
+             </div>
 
             {/* Custom Width/Height Dimensions Inputs */}
             {exportPreset.name === "Custom" && (

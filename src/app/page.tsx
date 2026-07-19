@@ -58,7 +58,7 @@ export default function Gradients() {
           <p className="text-slate-400 font-semibold text-sm">
             All gradients are 100% free.
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400">
             Adjust color stops, angle, noise, and download custom visual assets.
           </p>
         </div>
