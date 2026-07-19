@@ -31,7 +31,7 @@ Developed using Next.js, React 19, TypeScript, and Tailwind CSS v4.
 *   **Framework**: [Next.js (App Router)](https://nextjs.org/)
 *   **Language**: [TypeScript](https://www.typescriptlang.org/)
 *   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Icons**: `dicons` (Designali Icon Library)
+*   **Icons**: `lucide-react` (Lucide Icon Library)
 *   **Graphics & Rendering**: HTML5 Canvas API
 
 ---
